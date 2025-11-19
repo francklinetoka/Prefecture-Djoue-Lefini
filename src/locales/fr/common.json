@@ -1,0 +1,50 @@
+{
+  "header": {
+    "title": "PRÉFECTURE DU DJOUÉ-LÉFINI",
+    "subtitle": "Département du Pool • République du Congo",
+    "search": "Rechercher...",
+    "home": "Accueil",
+    "institution": "Institution",
+    "governance": "Gouvernance",
+    "transparency": "Transparence",
+    "prefet": "Mot du Préfet",
+    "services": "Services",
+    "allServices": "Tous les services",
+    "procedures": "Démarches",
+    "civilStatus": "État civil",
+    "tax": "Fiscalité",
+    "news": "Actualités",
+    "districts": "Districts",
+    "contact": "Aide & Contact"
+  },
+  "hero": {
+    "title": "Préfecture du Djoué-Léfini",
+    "subtitle": "République du Congo",
+    "welcome": "Bienvenue dans le cœur vert du Congo"
+  },
+  "territory": {
+    "title": "Notre Territoire",
+    "subtitle": "Le Département du Djoué-Léfini est composé de 6 districts",
+    "select": "Sélectionnez un district",
+    "discover": "Découvrez les paysages et la vie de chaque territoire.",
+    "viewAll": "Voir toutes les fiches districts"
+  },
+  "prefet": {
+    "title": "Message du Préfet",
+    "name": "Son Excellence Albert NGOMA"
+  },
+  "footer": {
+    "contact": "Contact & Localisation",
+    "quickLinks": "Liens rapides",
+    "follow": "Suivez-nous",
+    "copyright": "© 2025 Préfecture du Djoué-Léfini - Tous droits réservés"
+  },
+  "districts": {
+    "Odziba": "Odziba",
+    "Vindza": "Vindza",
+    "Kimba": "Kimba",
+    "Mayama": "Mayama",
+    "Ngabé": "Ngabé",
+    "Ignié": "Ignié"
+  }
+}

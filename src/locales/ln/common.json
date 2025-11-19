@@ -1,0 +1,42 @@
+{
+  "header": {
+    "title": "PRÉFECTURE YA DJOUÉ-LÉFINI",
+    "subtitle": "Departement ya Pool • Repubiliki ya Kongo",
+    "search": "Luka...",
+    "home": "Ndako",
+    "institution": "Institution",
+    "governance": "Bosali",
+    "transparency": "Polele",
+    "prefet": "Nsango ya Préfet",
+    "services": "Misala",
+    "allServices": "Misala nyonso",
+    "procedures": "Makambo ya démarche",
+    "civilStatus": "État civil",
+    "tax": "Impôts",
+    "news": "Nsango",
+    "districts": "Districts",
+    "contact": "Lisalisi mpe contact"
+  },
+  "hero": {
+    "title": "Préfecture ya Djoué-Léfini",
+    "subtitle": "Repubiliki ya Kongo",
+    "welcome": "Boyei malamu na kati ya Kongo ya vert"
+  },
+  "territory": {
+    "title": "Ezalela na biso",
+    "subtitle": "Departement ya Djoué-Léfini ezali na districts 6",
+    "select": "Pona district",
+    "discover": "Tala banzete mpe bomoi ya ezalela nyonso.",
+    "viewAll": "Tala fiches nyonso ya districts"
+  },
+  "prefet": {
+    "title": "Nsango ya Préfet",
+    "name": "Ekobo Albert NGOMA"
+  },
+  "footer": {
+    "contact": "Contact mpe esika",
+    "quickLinks": "Liens ya polele",
+    "follow": "Landá biso",
+    "copyright": "© 2025 Préfecture ya Djoué-Léfini - Makoki nyonso ezangisi"
+  }
+}

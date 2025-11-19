@@ -1,0 +1,50 @@
+{
+  "header": {
+    "title": "PREFECTURE OF DJOUÉ-LÉFINI",
+    "subtitle": "Pool Department • Republic of the Congo",
+    "search": "Search...",
+    "home": "Home",
+    "institution": "Institution",
+    "governance": "Governance",
+    "transparency": "Transparency",
+    "prefet": "Prefect's Message",
+    "services": "Services",
+    "allServices": "All Services",
+    "procedures": "Procedures",
+    "civilStatus": "Civil Status",
+    "tax": "Taxation",
+    "news": "News",
+    "districts": "Districts",
+    "contact": "Help & Contact"
+  },
+  "hero": {
+    "title": "Prefecture of Djoué-Léfini",
+    "subtitle": "Republic of the Congo",
+    "welcome": "Welcome to the green heart of Congo"
+  },
+  "territory": {
+    "title": "Our Territory",
+    "subtitle": "The Djoué-Léfini Department consists of 6 districts",
+    "select": "Select a district",
+    "discover": "Discover the landscapes and life of each territory.",
+    "viewAll": "View all district files"
+  },
+  "prefet": {
+    "title": "Message from the Prefect",
+    "name": "His Excellency Albert NGOMA"
+  },
+  "footer": {
+    "contact": "Contact & Location",
+    "quickLinks": "Quick Links",
+    "follow": "Follow us",
+    "copyright": "© 2025 Prefecture of Djoué-Léfini - All rights reserved"
+  },
+  "districts": {
+    "Odziba": "Odziba",
+    "Vindza": "Vindza",
+    "Kimba": "Kimba",
+    "Mayama": "Mayama",
+    "Ngabé": "Ngabé",
+    "Ignié": "Ignié"
+  }
+}
