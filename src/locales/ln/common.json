@@ -17,11 +17,18 @@
     "districts": "Districts",
     "contact": "Lisalisi mpe contact"
   },
-  "hero": {
-    "title": "Préfecture ya Djoué-Léfini",
-    "subtitle": "Repubiliki ya Kongo",
-    "welcome": "Boyei malamu na kati ya Kongo ya vert"
+"hero": {
+  "welcome": {
+    "title": "Boyei malamu na kati ya Djoué-Léfini",
+    "subtitle": "Departement ya Pool • Repubiliki ya Kongo",
+    "greeting": "Kimia mpe bosali bizala na bino"
   },
+  "info": {
+    "districts": "Districts",
+    "creation": "Kozala",
+    "capital": "Odziba"
+  }
+},
   "territory": {
     "title": "Ezalela na biso",
     "subtitle": "Departement ya Djoué-Léfini ezali na districts 6",

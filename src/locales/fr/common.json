@@ -17,11 +17,18 @@
     "districts": "Districts",
     "contact": "Aide & Contact"
   },
-  "hero": {
-    "title": "Préfecture du Djoué-Léfini",
-    "subtitle": "République du Congo",
-    "welcome": "Bienvenue dans le cœur vert du Congo"
+ "hero": {
+  "welcome": {
+    "title": "Bienvenue au cœur du Djoué-Léfini",
+    "subtitle": "Département du Pool • République du Congo",
+    "greeting": "Que la paix et la prospérité soient avec vous"
   },
+  "info": {
+    "districts": "Districts",
+    "creation": "Création",
+    "capital": "Chef-lieu"
+  }
+},
   "territory": {
     "title": "Notre Territoire",
     "subtitle": "Le Département du Djoué-Léfini est composé de 6 districts",

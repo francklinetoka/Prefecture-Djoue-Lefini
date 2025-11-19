@@ -17,11 +17,32 @@
     "districts": "Districts",
     "contact": "Help & Contact"
   },
-  "hero": {
-    "title": "Prefecture of Djoué-Léfini",
-    "subtitle": "Republic of the Congo",
-    "welcome": "Welcome to the green heart of Congo"
+
+
+
+
+
+"hero": {
+  "welcome": {
+    "title": "Welcome to the heart of Djoué-Léfini",
+    "subtitle": "Pool Department • Republic of the Congo",
+    "greeting": "May peace and prosperity be with you"
   },
+  "info": {
+    "districts": "Districts",
+    "creation": "Established",
+    "capital": "Capital"
+  }
+},
+
+
+
+
+
+
+
+
+
   "territory": {
     "title": "Our Territory",
     "subtitle": "The Djoué-Léfini Department consists of 6 districts",
