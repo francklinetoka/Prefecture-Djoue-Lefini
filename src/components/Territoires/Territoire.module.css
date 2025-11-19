@@ -1,162 +1,38 @@
-:root {
-  --cg-green-800: #2c613e;
-  --cg-green-700: #387c4f;
-  --cg-green-600: #4caf50;
-  --cg-green-500: #66bb6a;
-  --gray-900: #1f2937;
-  --gray-700: #374151;
-  --gray-600: #4b5563;
-  --gray-100: #f3f4f6;
-}
-
-/* === Section globale === */
-.territoireSection {
-  padding: 6rem 0;
-  background: linear-gradient(to bottom, #ffffff 0%, #f8fdf9 60%, #ecfdf5 100%);
-}
-
-/* Titres */
-.territoireTitle {
-  font-size: 3rem;
-  line-height: 1.1;
-  font-weight: 900;
-  text-align: center;
-  color: var(--cg-green-800);
-  margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-  .territoireTitle { font-size: 4rem; }
-}
-
-.territoireSubtitle {
-  font-size: 1.25rem;
-  text-align: center;
-  color: var(--gray-700);
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Colonne gauche */
-.districtsTitle {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--gray-900);
-  margin-bottom: 1rem;
-}
-
-.districtsText {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--gray-700);
-  margin-bottom: 2.5rem;
-}
-
-/* Grille des boutons */
-.districtGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-@media (min-width: 640px) {
-  .districtGrid { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* Boutons districts */
 .districtButton {
+  --district-color: #94a3b8; /* fallback */
+  
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 1.1rem 1rem;
-  border-radius: 1rem;
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--gray-900);
-  background: var(--gray-100);
-  border: 2px solid transparent;
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
+  padding: 14px 20px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-left: 6px solid var(--district-color);
+  border-radius: 12px;
+  font-weight: 600;
+  color: #374151;
+  text-align: left;
+  transition: all 0.3s ease;
 }
 
+/* On récupère la couleur via data-color */
+.districtButton[data-color="#1e40af"] { --district-color: #1e40af; }
+.districtButton[data-color="#16a34a"] { --district-color: #16a34a; }
+.districtButton[data-color="#dc2626"] { --district-color: #dc2626; }
+.districtButton[data-color="#f59e0b"] { --district-color: #f59e0b; }
+.districtButton[data-color="#7c2d12"] { --district-color: #7c2d12; }
+.districtButton[data-color="#6d28d9"] { --district-color: #6d28d9; }
+
 .districtButton:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--district-color);
+  background: #f8fafc;
+  transform: translateX(6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.09);
 }
 
 .districtButtonActive {
-  background: var(--district-color);
-  color: white !important;
+  background: linear-gradient(to right, rgba(22,163,74,0.08), transparent);
   border-color: var(--district-color);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  transform: translateY(-6px);
-}
-
-.districtButtonActive:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-}
-
-/* Lien "Voir toutes les fiches" */
-.viewAllLink {
-  display: inline-flex;
-  align-items: center;
   font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--cg-green-700);
-  text-decoration: none;
-  padding: 0.75rem 0;
-  transition: all 0.3s ease;
-  group: '';
-}
-
-.viewAllLink:hover {
-  color: var(--cg-green-800);
-}
-
-/* === Image du district === */
-.imageContainer {
-  position: relative;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  height: 520px;
-  transition: all 0.4s ease;
-}
-
-.imageContainer:hover {
-  transform: scale(1.02);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-}
-
-.districtImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-}
-
-.imageContainer:hover .districtImage {
-  transform: scale(1.05);
-}
-
-/* Overlay sombre + légende */
-.imageOverlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
-  padding: 3rem 2rem 2rem;
-  color: white;
-}
-
-.imageCaption h4 {
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 0.5rem;
-}
-
-.imageCaption p {
-  font-size: 1.1rem;
-  opacity: 0.9;
+  color: #166534;
 }
