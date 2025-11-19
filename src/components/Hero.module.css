@@ -1,107 +1,106 @@
 .hero {
   position: relative;
-  height: 50vh;               /* ← Moitié de l'écran */
-  min-height: 380px;
+  height: 50vh;
+  min-height: 360px;
   overflow: hidden;
 }
 
-.carousel {
-  position: absolute;
-  inset: 0;
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 1.8s ease-in-out;
-}
-
+.carousel { position: absolute; inset: 0; }
+.slide { position: absolute; inset: 0; opacity: 0; transition: opacity 2s ease; }
 .slide.active { opacity: 1; }
+.image { width: 100%; height: 100%; object-fit: cover; }
 
-.image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.gradient {
+/* Fond sombre léger */
+.hero::before {
+  content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+  background: rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
 
-.content {
+/* TOUT LE CONTENU AU CENTRE EXACT */
+.centerContent {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  padding: 2rem 1.5rem;
   text-align: center;
-  color: white;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.textBlock {
+  margin-bottom: 2rem;
 }
 
 .title {
-  font-size: 2.4rem;          /* Beaucoup plus petit */
-  font-weight: 900;
+  font-size: 2.1rem;
+  font-weight: 500;           /* ← Plus de gras */
+  color: white;
   margin: 0 0 0.5rem;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.7);
-  line-height: 1.1;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
 
 .subtitle {
-  font-size: 1rem;            /* Très discret */
-  opacity: 0.9;
+  font-size: 0.95rem;
+  font-weight: 400;           /* ← Très léger */
+  color: rgba(255,255,255,0.92);
   margin: 0;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
-.infoGrid {
+/* Bloc des 3 infos avec fond transparent + blur */
+.infoBlock {
   display: flex;
   justify-content: center;
-  gap: 1.8rem;
-  margin-top: 1.8rem;
+  gap: 3.5rem;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
-.infoCard {
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 14px;
-  padding: 0.9rem 1.4rem;
-  min-width: 100px;
+.infoItem {
+  background: rgba(255, 255, 255, 0.11);   /* ← Fond transparent revenu */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 0.9rem 1.8rem;
+  min-width: 110px;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
-.infoNumber {
+.infoItem:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.number {
   display: block;
-  font-size: 1.9rem;          /* Beaucoup plus petit */
-  font-weight: 800;
+  font-size: 1.9rem;
+  font-weight: 600;
   color: #f5b542;
   line-height: 1;
 }
 
-.infoLabel {
+.label {
   display: block;
-  font-size: 0.78rem;         /* Très discret */
-  margin-top: 0.3rem;
-  font-weight: 600;
-  opacity: 0.88;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  margin-top: 6px;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 1.8px;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .hero { height: 45vh; min-height: 340px; }
-  .title { font-size: 2rem; }
-  .subtitle { font-size: 0.9rem; }
-  .infoGrid { gap: 1.2rem; }
-  .infoCard { padding: 0.7rem 1rem; min-width: 90px; }
-  .infoNumber { font-size: 1.7rem; }
-  .infoLabel { font-size: 0.72rem; }
+  .title { font-size: 1.8rem; }
+  .subtitle { font-size: 0.88rem; }
+  .infoBlock { gap: 1.8rem; }
+  .infoItem { padding: 0.8rem 1.4rem; min-width: 100px; }
+  .number { font-size: 1.7rem; }
+  .label { font-size: 0.68rem; }
 }
