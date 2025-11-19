@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronRight } from 'lucide-react';
 // CORRECTION : Si ActualitesSection.jsx est dans le même dossier que ActualiteCard.jsx
 import ActualiteCard from './ActualiteCard'; 

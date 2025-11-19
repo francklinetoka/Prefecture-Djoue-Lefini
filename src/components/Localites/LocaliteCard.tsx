@@ -1,6 +1,5 @@
 // src/components/LocaliteCard.jsx
 
-import React from 'react';
 import { MapPin, ChevronRight } from 'lucide-react';
 import styles from './Localites.module.css';
 

@@ -1,6 +1,5 @@
 // src/components/LocalitesSection.jsx
 
-import React from 'react';
 import LocaliteCard from './LocaliteCard';
 import styles from './Localites.module.css';
 

@@ -1,6 +1,5 @@
 // src/components/MessageDuPrefet.jsx
 
-import React from 'react';
 import styles from './MessageDuPrefet.module.css';
 
 export default function MessageDuPrefet() {

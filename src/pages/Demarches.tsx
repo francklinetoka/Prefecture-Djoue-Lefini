@@ -1,5 +1,4 @@
 // src/pages/Demarches.tsx – Version finale propre & institutionnelle
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight, Users, CreditCard, Home, Briefcase, ClipboardList, Clock, Building2 } from 'lucide-react';
 

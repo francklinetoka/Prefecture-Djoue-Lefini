@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronRight, Mail, Phone, MapPin, Users, Briefcase, Info, List, UserCheck, PhoneCall } from 'lucide-react';
 
 // --- Données des districts (INCHANGÉES) ---

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronRight, Calendar, Tag } from 'lucide-react';
 import styles from './Actualites.module.css';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import ServiceCard from './ServiceCard';
 import styles from './ServicesLocaux.module.css';

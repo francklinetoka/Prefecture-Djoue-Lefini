@@ -1,6 +1,5 @@
 // src/pages/DemarcheDetail.tsx
 // → TON code original, seule la disposition a changé (2 colonnes)
-import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Clock, CheckCircle, FileText, AlertCircle } from 'lucide-react';
 

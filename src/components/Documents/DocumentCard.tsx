@@ -1,4 +1,3 @@
-import React from 'react';
 import { Download, FileText } from 'lucide-react';
 import styles from './Documents.module.css';
 
