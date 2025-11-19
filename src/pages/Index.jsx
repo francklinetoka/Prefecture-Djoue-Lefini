@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 import MessageDuPrefet from '../components/MessageDuPrefet'; // Composant au niveau racine
 // --- Sections importées des sous-dossiers ---
 import ActualitesSection from '../components/Actualites/ActualitesSection';
-import ServicesLocauxSection from '../components/Services/ServicesLocauxSection';
+import ServicesLocauxSection from '../components/services/ServicesLocauxSection';
 import DocumentsSection from '../components/Documents/DocumentsSection';
 import LocalitesHero from '../components/Localites/LocalitesHero';
 import TerritoireSection from '../components/Territoires/TerritoireSection';
