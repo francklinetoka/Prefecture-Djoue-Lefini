@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-import ActualiteCard from '../components/Actualites/ActualiteCard';
+import { useState } from 'react';
+import ActualiteCard from '../components/Actualites/ActualiteCard.jsx';
 import { Calendar, Tag } from 'lucide-react';
-import styles from './ActualitesPage.module.css'; // CSS spécifique à la mise en page complète
+import styles from './ActualitesPage.module.css';
 
-// IMPORTANT: Assurez-vous d'importer le composant Hero approprié ici
-// import HeroActualite from '../components/HeroActualite'; 
-
-// Définition des données complètes
 const toutesActualitesData = [
   { id: 1, title: "Réouverture du bureau d’état civil d’Odziba", date: "15 nov. 2025", category: "Communiqué", excerpt: "Suite aux travaux de modernisation, le service d’état civil est à nouveau opérationnel à compter du 18 novembre 2025...", imageUrl: "https://placehold.co/150x100/4CAF50/white?text=Etat+Civil", content: "Contenu complet de l'article 1..." },
   { id: 2, title: "Lancement du Plan 'Djoué-Léfini Numérique 2030'", date: "12 nov. 2025", category: "Dossier", excerpt: "Un ambitieux programme visant à digitaliser l'ensemble des démarches administratives locales.", imageUrl: "https://placehold.co/150x100/2196F3/white?text=Numerique", content: "Contenu complet de l'article 2..." },
@@ -27,7 +23,6 @@ export default function ActualitesPage() {
   const [filter, setFilter] = useState('Toutes');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // 1. Filtrage
   const filteredArticles = toutesActualitesData.filter(article => {
     const matchesFilter = filter === 'Toutes' || article.category === filter;
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -35,7 +30,6 @@ export default function ActualitesPage() {
     return matchesFilter && matchesSearch;
   });
 
-  // 2. Pagination
   const totalPages = Math.ceil(filteredArticles.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentArticles = filteredArticles.slice(startIndex, startIndex + ITEMS_PER_PAGE);
@@ -58,20 +52,13 @@ export default function ActualitesPage() {
 
   return (
     <main className="bg-gray-50 text-[var(--gray-950)]">
-      
-      {/* 1. Composant Hero Actualité */}
-      {/* <HeroActualite /> */} 
-      {/* Placeholder pour le Hero */}
       <div className={styles.heroPlaceholder}>
         <h1 className={styles.heroTitle}>Actualités et Communiqués</h1>
         <p className={styles.heroSubtitle}>Retrouvez l'ensemble des communications officielles de la Préfecture du Djoué-Léfini.</p>
       </div>
 
-      {/* 2. Corps de la page : Liste des articles et Filtres */}
       <section className="py-16">
         <div className="px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto grid lg:grid-cols-4 gap-12">
-          
-          {/* Colonne latérale : Filtres et recherche (1/4 largeur) */}
           <aside className={styles.asideSticky}>
             <div className={styles.filterCard}>
               <h3 className={styles.filterTitle}>Rechercher</h3>
@@ -81,7 +68,7 @@ export default function ActualitesPage() {
                 value={searchTerm}
                 onChange={(e) => {
                     setSearchTerm(e.target.value);
-                    setCurrentPage(1); // Retour à la première page lors de la recherche
+                    setCurrentPage(1);
                 }}
                 className={styles.searchInput}
               />
@@ -95,7 +82,7 @@ export default function ActualitesPage() {
                     <button 
                         onClick={() => {
                             setFilter(cat);
-                            setCurrentPage(1); // Retour à la première page lors du filtrage
+                            setCurrentPage(1);
                         }}
                         className={`${styles.categoryButton} ${filter === cat ? styles.categoryButtonActive : ''}`}
                     >
@@ -107,7 +94,6 @@ export default function ActualitesPage() {
             </div>
           </aside>
 
-          {/* Colonne principale : Liste des articles (3/4 largeur sur desktop) */}
           <div className="lg:col-span-3 space-y-8">
             {currentArticles.length > 0 ? (
                 currentArticles.map((article) => (
@@ -123,7 +109,6 @@ export default function ActualitesPage() {
                 </p>
             )}
 
-            {/* Pagination */}
             {totalPages > 1 && (
                 <div className="flex justify-center pt-6">
                     <div className="inline-flex space-x-1">

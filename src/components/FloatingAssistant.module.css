@@ -1,0 +1,190 @@
+/* src/components/FloatingAssistant.module.css – Version finale compacte & professionnelle */
+
+.triggerBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.42);
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease;
+}
+
+.triggerBtn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 30px rgba(22, 163, 74, 0.55);
+}
+
+.chatWindow {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 340px;
+  max-width: calc(100vw - 40px);
+  height: 460px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, sans-serif;
+  animation: popIn 0.35s ease-out;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.header {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  padding: 14px 16px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.closeBtn {
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s;
+}
+
+.closeBtn:hover { background: rgba(255, 255, 255, 0.35); }
+
+.welcome {
+  padding: 16px 16px 12px;
+  background: #f8fafc;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Carte réponse – une seule à la fois */
+.answerCard {
+  margin: 16px 20px;
+  padding: 18px 20px;
+  background: white;
+  border: 2.5px solid #16a34a;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(22, 163, 74, 0.14);
+  animation: fadeInUp 0.42s ease-out;
+  font-size: 13.8px;
+  line-height: 1.75;
+  color: #1e293b;
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.answerCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #16a34a, #15803d);
+  border-radius: 4px 0 0 4px;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Barre de questions */
+.questionsBar {
+  padding: 12px 10px;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.questionsScroll {
+  flex: 1;
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  padding: 4px 0;
+  scrollbar-width: none;
+}
+
+.questionsScroll::-webkit-scrollbar { display: none; }
+
+.questionChip {
+  padding: 9px 15px;
+  background: #f1f5f9;
+  border: 1.8px solid #e2e8f0;
+  border-radius: 30px;
+  font-size: 12.8px;
+  font-weight: 600;
+  color: #475569;
+  white-space: nowrap;
+  transition: all 0.28s ease;
+  flex-shrink: 0;
+}
+
+.questionChip:hover {
+  background: #ecfdf5;
+  border-color: #16a34a;
+  color: #166534;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(22, 163, 74, 0.16);
+}
+
+.scrollBtn {
+  width: 34px;
+  height: 34px;
+  background: #f8fafc;
+  border: 1.8px solid #e2e8f0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #64748b;
+  flex-shrink: 0;
+  transition: all 0.25s;
+}
+
+.scrollBtn:hover {
+  background: #ecfdf5;
+  border-color: #16a34a;
+  color: #166534;
+}
+
+.footer {
+  padding: 10px;
+  background: white;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+  font-size: 11px;
+  flex-shrink: 0;
+}

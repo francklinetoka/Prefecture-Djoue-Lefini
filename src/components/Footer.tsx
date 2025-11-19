@@ -20,12 +20,10 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      
-      {/* SECTION PRINCIPALE – DIRECTEMENT LE CONTENU UTILE */}
+      {/* TOUT TON JSX EST IDENTIQUE – RIEN N’A ÉTÉ TOUCHÉ */}
       <div className={styles.mainSection}>
         <div className={styles.container}>
           <div className={styles.grid}>
-
             {/* Contact & Localisation */}
             <div className={styles.contactColumn}>
               <h3 className={styles.sectionTitle}>
@@ -98,12 +96,10 @@ export default function Footer() {
                 <li><a href="/contact">Contact & aide</a></li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>
 
-      {/* BOTTOM BAR – Copyright + Réseaux + Retour en haut */}
       <div className={styles.bottomBar}>
         <div className={styles.container}>
           <div className={styles.bottomContent}>

@@ -1,5 +1,4 @@
-// src/pages/Contact.tsx – Version définitive (3 sections centrées)
-import { ChevronRight, Mail, Phone, MapPin, Shield, Users } from 'lucide-react';
+import { Mail, Phone, MapPin, Shield, Users } from 'lucide-react';
 
 const prefectureData = {
   name: "Préfecture de Djoué-Léfini",
@@ -24,10 +23,9 @@ const districts = [
   { id: 'mbanza', name: 'Mbanza-Ndounga', prefet: 'Mme Marie-Louise NGOUARI', email: 'prefecture.mbanza@djouelefini.cg', tel: '+242 06 888 9999', adresse: 'Quartier Résidentiel, Mbanza-Ndounga' },
 ];
 
-// Découpage en 3 groupes
-const section1 = districts.slice(0, 3); // Odziba, Ngabé, Ignié
-const section2 = districts.slice(3, 6); // Lémini, Ossiélé, Vindza
-const section3 = districts.slice(6, 8); // Kimba, Mbanza-Ndounga
+const section1 = districts.slice(0, 3);
+const section2 = districts.slice(3, 6);
+const section3 = districts.slice(6, 8);
 
 const DistrictCard = ({ district }: { district: any }) => (
   <div className="w-full max-w-sm bg-white rounded-xl border border-gray-200 overflow-hidden hover:border-[var(--cg-green-700)] transition-all duration-300">
@@ -67,10 +65,7 @@ export default function Contact() {
   return (
     <main className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-
-   
-
-        {/* === SIÈGE PRÉFECTORAL === */}
+        {/* SIÈGE PRÉFECTORAL */}
         <section className="mb-20">
           <div className="bg-white rounded-2xl border-t-8 border-[var(--cg-green-700)] overflow-hidden">
             <div className="bg-gradient-to-r from-[var(--cg-green-800)] to-[var(--cg-green-700)] text-white py-12 text-center">
@@ -111,35 +106,31 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* === DISTRICTS EN 3 SECTIONS CENTRÉES === */}
+        {/* DISTRICTS */}
         <section className="space-y-20">
           <h2 className="text-center text-4xl font-extrabold text-[var(--cg-green-800)] flex items-center justify-center gap-4">
             <Users size={44} className="text-[var(--cg-yellow-400)]" />
             Districts Administratifs
           </h2>
 
-          {/* Section 1 – 3 cartes */}
           <div className="flex justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl">
               {section1.map(d => <DistrictCard key={d.id} district={d} />)}
             </div>
           </div>
 
-          {/* Section 2 – 3 cartes */}
           <div className="flex justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl">
               {section2.map(d => <DistrictCard key={d.id} district={d} />)}
             </div>
           </div>
 
-          {/* Section 3 – 2 cartes parfaitement centrées */}
           <div className="flex justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-3xl">
               {section3.map(d => <DistrictCard key={d.id} district={d} />)}
             </div>
           </div>
         </section>
-
       </div>
     </main>
   );

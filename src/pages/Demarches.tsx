@@ -1,4 +1,4 @@
-// src/pages/Demarches.tsx – Version finale propre & institutionnelle
+// src/pages/Demarches.tsx – Version finale propre & institutionnelle (corrigée TS/Vercel)
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight, Users, CreditCard, Home, Briefcase, ClipboardList, Clock, Building2 } from 'lucide-react';
 
@@ -48,9 +48,11 @@ const procedures = [
     location: "Mairie ou antenne administrative du lieu de résidence",
     icon: ClipboardList,
   },
-];
+] as const;
 
-const ProcedureCard = ({ proc }: { proc: typeof procedures[0] }) => {
+type Procedure = typeof procedures[number];
+
+const ProcedureCard = ({ proc }: { proc: Procedure }) => {
   const navigate = useNavigate();
   const Icon = proc.icon;
 
