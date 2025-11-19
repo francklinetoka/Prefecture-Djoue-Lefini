@@ -23,7 +23,12 @@
 
 /* On désactive totalement le fond blanc global au scroll */
 .header.scrolled {
-  background: transparent !important;
+  
+   background: var(--cg-green-800) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+
+
   box-shadow: none !important;
   backdrop-filter: none !important;
 }
@@ -263,8 +268,14 @@
     padding: 2.5rem 0;
   }
   .header.scrolled .navLinks {
-    background: white !important;
+    background: var(--cg-green-800) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
   }
+
+
+
+
 }
 
 .navLink {
