@@ -1,0 +1,123 @@
+:root {
+  --cg-yellow-400: #f5b542;
+  --cg-green-800: #2c613e;
+  --cg-green-700: #387c4f;
+  --cg-green-600: #4caf50;
+  --cg-green-500: #66bb6a;
+  --gray-900: #1f2937;
+  --gray-800: #1e293b;
+  --gray-700: #374151;
+  --gray-600: #4b5563;
+  --gray-100: #f3f4f6;
+}
+
+/* === Section globale === */
+.documentsSection {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet subtil de fond */
+.documentsSection::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 30% 80%, rgba(56, 124, 79, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.documentsTitle {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 900;
+  text-align: center;
+  color: var(--cg-yellow-400);
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .documentsTitle {
+    font-size: 3.5rem;
+  }
+}
+
+/* === Carte document === */
+.documentCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 1rem;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet bandeau jaune au hover */
+.documentCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--cg-yellow-400);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+}
+
+.documentCard:hover::before {
+  transform: scaleY(1);
+}
+
+.documentCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+  border-color: var(--cg-yellow-400);
+}
+
+/* Icône fichier */
+.documentIcon {
+  color: var(--cg-green-700);
+  flex-shrink: 0;
+}
+
+/* Titre */
+.documentTitle {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Métadonnées */
+.documentMeta {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  font-weight: 500;
+  display: block;
+}
+
+/* Icône téléchargement */
+.documentDownloadIcon {
+  color: var(--cg-green-600);
+  transition: all 0.3s ease;
+}
+
+.documentCard:hover .documentDownloadIcon {
+  color: var(--cg-green-700);
+  transform: translateY(-3px) scale(1.1);
+}

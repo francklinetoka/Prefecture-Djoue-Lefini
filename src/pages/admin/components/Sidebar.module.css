@@ -1,0 +1,32 @@
+/* Sidebar.module.css */
+.sidebar {
+  @apply fixed left-0 top-0 h-full w-64 bg-[var(--cg-green-900)] text-white flex flex-col shadow-2xl z-50;
+}
+
+.logo {
+  @apply p-6 border-b border-[var(--cg-green-800)] flex items-center gap-3;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  @apply flex-1 py-6;
+}
+
+.link {
+  @apply flex items-center gap-4 px-6 py-4 text-gray-300 hover:bg-[var(--cg-green-800)] hover:text-white transition;
+}
+
+.link.active {
+  @apply bg-[var(--cg-green-800)] text-[var(--cg-yellow-400)] border-l-4 border-[var(--cg-yellow-400)];
+}
+
+.footer {
+  @apply p-6 border-t border-[var(--cg-green-800)];
+}
+
+.logout {
+  @apply flex items-center gap-4 text-red-400 hover:text-red-300 w-full;
+}

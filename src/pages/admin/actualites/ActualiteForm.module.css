@@ -1,0 +1,28 @@
+/* ActualiteForm.module.css */
+.modalOverlay {
+  @apply fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50;
+}
+
+.modal {
+  @apply bg-gray-900 rounded-xl p-8 max-w-3xl w-full max-h-screen overflow-y-auto border border-[var(--cg-green-700)];
+}
+
+.input, .textarea {
+  @apply w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white mb-4 focus:border-[var(--cg-yellow-400)] focus:outline-none;
+}
+
+.textarea {
+  @apply resize-none;
+}
+
+.upload label {
+  @apply block text-sm font-semibold mb-2;
+}
+
+.checkbox {
+  @apply flex items-center gap-3 my-6;
+}
+
+.actions {
+  @apply flex justify-end gap-4 mt-8;
+}

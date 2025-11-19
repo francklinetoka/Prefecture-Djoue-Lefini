@@ -1,0 +1,21 @@
+/* src/pages/District.module.css */
+
+.headerHero {
+    /* Style de la bannière supérieure, au cas où un fond avec une image ou un motif complexe non géré par Tailwind est nécessaire */
+    background-size: cover;
+    background-position: center center;
+    /* Actuellement géré par un fond couleur dans le .tsx, mais peut être remplacé ici pour une image de fond */
+}
+
+.keyFactsContainer {
+    /* Pour cibler spécifiquement le conteneur des statistiques clés si on veut un effet 3D ou un ombrage unique */
+    border-left: 6px solid var(--cg-yellow-400); /* Ajout d'une ligne d'accentuation en Jaune */
+    padding: 1.5rem;
+    background-color: #fcfcfc;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.contactBox {
+    /* Pour renforcer l'encart de contact si les classes Tailwind ne suffisent pas */
+    border: 1px solid var(--cg-green-600);
+}

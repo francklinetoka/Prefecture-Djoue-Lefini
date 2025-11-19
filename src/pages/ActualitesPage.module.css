@@ -1,0 +1,123 @@
+/* Variables (Référence pour les couleurs principales) */
+:root {
+    --cg-green-900: #1b5e20;
+    --cg-green-800: #2e7d32;
+    --cg-green-700: #387c4f;
+    --cg-green-600: #4caf50;
+    --cg-yellow-400: #f5b542;
+    --gray-950: #030712;
+    --text-secondary: #4b5563; /* grey-600 */
+}
+
+/* --- Hero Placeholder --- */
+.heroPlaceholder {
+    /* Style de la bannière supérieure (similaire au Hero) */
+    padding: 6rem 0 3rem 0;
+    text-align: center;
+    background-color: var(--cg-green-900);
+    color: white;
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.heroSubtitle {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Aside & Filtres --- */
+.asideSticky {
+    /* sticky top-8 self-start */
+    position: sticky;
+    top: 2rem; /* Espace depuis le haut */
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.filterCard {
+    /* p-6 bg-white rounded-xl shadow-md border border-gray-100 */
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border: 1px solid #f3f4f6;
+}
+
+.filterTitle {
+    /* font-bold text-lg mb-4 text-[var(--cg-green-800)] */
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--cg-green-800);
+}
+
+.searchInput {
+    /* w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--cg-green-600)] focus:border-[var(--cg-green-600)] */
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    outline: none;
+    transition: all 0.2s;
+}
+.searchInput:focus {
+    border-color: var(--cg-green-600);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* Similaire à focus:ring */
+}
+
+.categoryButton {
+    /* flex justify-between items-center text-sm text-gray-700 hover:text-[var(--cg-green-700)] */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #374151; /* text-gray-700 */
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.15s;
+}
+.categoryButton:hover {
+    color: var(--cg-green-700);
+}
+
+.categoryButtonActive {
+    /* Style pour la catégorie sélectionnée */
+    color: var(--cg-green-700);
+    font-weight: 700;
+}
+
+/* --- Pagination --- */
+.paginationButton {
+    /* bg-gray-100 text-[var(--cg-green-900)] hover:bg-gray-200 px-4 py-2 rounded-lg */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #f3f4f6; /* bg-gray-100 */
+    color: var(--cg-green-900);
+    font-weight: 600;
+    transition: background-color 0.15s;
+}
+.paginationButton:hover {
+    background-color: #e5e7eb; /* hover:bg-gray-200 */
+}
+
+.paginationButtonActive {
+    /* Style pour le bouton actif (similaire à l'original) */
+    /* bg-[var(--cg-green-700)] text-white px-4 py-2 rounded-lg font-bold */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--cg-green-700);
+    color: white;
+    font-weight: 700;
+}

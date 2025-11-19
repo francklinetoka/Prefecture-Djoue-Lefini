@@ -1,0 +1,127 @@
+.
+├── public
+│   ├── RC_Logo.png
+│   └── vite.svg
+├── src
+│   ├── assets
+│   │   └── react.svg
+│   ├── components
+│   │   ├── Actualites
+│   │   │   ├── ActualiteCard.jsx
+│   │   │   ├── Actualites.module.css
+│   │   │   └── ActualitesSection.jsx
+│   │   ├── Documents
+│   │   │   ├── DocumentCard.jsx
+│   │   │   ├── Documents.module.css
+│   │   │   └── DocumentsSection.jsx
+│   │   ├── Faq
+│   │   │   ├── Faq.module.css
+│   │   │   ├── FaqItem.jsx
+│   │   │   └── FaqSection.jsx
+│   │   ├── Localites
+│   │   │   ├── LocaliteCard.jsx
+│   │   │   ├── Localites.module.css
+│   │   │   ├── LocalitesHero.jsx
+│   │   │   ├── LocalitesHero.module.css
+│   │   │   └── LocalitesSection.jsx
+│   │   ├── Territoires
+│   │   │   ├── Territoire.module.css
+│   │   │   └── TerritoireSection.jsx
+│   │   ├── services
+│   │   │   ├── ServiceCard.jsx
+│   │   │   ├── ServicesLocaux.module.css
+│   │   │   └── ServicesLocauxSection.jsx
+│   │   ├── Footer.module.css
+│   │   ├── Footer.tsx
+│   │   ├── Header.module.css
+│   │   ├── Header.tsx
+│   │   ├── Hero.module.css
+│   │   ├── Hero.tsx
+│   │   ├── HeroActualite.module.css
+│   │   ├── HeroActualite.tsx
+│   │   ├── Layout.tsx
+│   │   ├── MessageDuPrefet.jsx
+│   │   └── MessageDuPrefet.module.css
+│   ├── hooks
+│   ├── integrations
+│   ├── lib
+│   ├── pages
+│   │   ├── admin
+│   │   │   ├── actualites
+│   │   │   │   ├── ActualiteForm.module.css
+│   │   │   │   ├── ActualiteForm.tsx
+│   │   │   │   ├── ActualitesList.module.css
+│   │   │   │   └── ActualitesList.tsx
+│   │   │   ├── components
+│   │   │   │   ├── AdminHeader.module.css
+│   │   │   │   ├── AdminHeader.tsx
+│   │   │   │   ├── AdminLayout.module.css
+│   │   │   │   ├── AdminLayout.tsx
+│   │   │   │   ├── DataTable.module.css
+│   │   │   │   ├── DataTable.tsx
+│   │   │   │   ├── Modal.module.css
+│   │   │   │   ├── Modal.tsx
+│   │   │   │   ├── Sidebar.module.css
+│   │   │   │   └── Sidebar.tsx
+│   │   │   ├── districts
+│   │   │   │   ├── DistrictForm.module.css
+│   │   │   │   ├── DistrictForm.tsx
+│   │   │   │   ├── DistrictsList.module.css
+│   │   │   │   └── DistrictsList.tsx
+│   │   │   ├── documents
+│   │   │   │   ├── DocumentForm.module.css
+│   │   │   │   ├── DocumentForm.tsx
+│   │   │   │   ├── DocumentsList.module.css
+│   │   │   │   └── DocumentsList.tsx
+│   │   │   ├── utilisateurs
+│   │   │   │   ├── AdminForm.module.css
+│   │   │   │   ├── AdminForm.tsx
+│   │   │   │   ├── AdminsList.module.css
+│   │   │   │   └── AdminsList.tsx
+│   │   │   ├── Dashboard.module.css
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── Login.module.css
+│   │   │   ├── Login.tsx
+│   │   │   ├── Register.module.css
+│   │   │   ├── Register.tsx
+│   │   │   ├── SuperAdminDashboard.tsx
+│   │   │   ├── SuperLogin.tsx
+│   │   │   └── SuperRegister.tsx
+│   │   ├── Actualites copy.tsx
+│   │   ├── ActualitesPage.module.css
+│   │   ├── ActualitesPage.tsx
+│   │   ├── Contact.module.css
+│   │   ├── Contact.tsx
+│   │   ├── DemarcheDetail.tsx
+│   │   ├── Demarches.tsx
+│   │   ├── District.module.css
+│   │   ├── District.tsx
+│   │   ├── DistrictDetail.module.css
+│   │   ├── DistrictDetail.tsx
+│   │   ├── Gouvernance.tsx
+│   │   ├── Home.tsx
+│   │   ├── Index.module.css
+│   │   ├── Index.tsx
+│   │   └── Transparence.tsx
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   └── styles.css
+├── .gitignore
+├── Propositions
+├── README.md
+├── eslint.config.js
+├── index.html
+├── notes
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tree.txt
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+21 directories, 104 files

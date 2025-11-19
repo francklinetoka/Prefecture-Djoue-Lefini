@@ -1,0 +1,123 @@
+/* src/pages/admin/components/AdminHeader.module.css */
+/* Version 100% CSS standard – garanti sans erreur Tailwind */
+
+.header {
+  background-color: #111111;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shield {
+  color: #ffcd00;
+  width: 40px;
+  height: 40px;
+}
+
+.title {
+  font-family: 'Manrope', 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: white;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  margin: -4px 0 0 0;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.notification {
+  position: relative;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.notification:hover {
+  color: white;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #ce1126;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1a1a1a;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #006633;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.name {
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.role {
+  color: #ffcd00;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.logoutBtn {
+  color: #ef4444;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.logoutBtn:hover {
+  color: #fca5a5;
+}

@@ -1,0 +1,188 @@
+/* Variables de référence (doivent être disponibles) */
+:root {
+    --cg-green-700: #387c4f;
+    --cg-green-800: #2e7d32;
+    --gray-900: #1f2937;
+    --white: #ffffff;
+}
+
+/* --- Section Hero Globale --- */
+.localitesHero {
+    position: relative;
+    width: 100%;
+    /* Hauteur confortable pour un Hero, ajustée pour mobile/desktop */
+    height: 60vh; 
+    min-height: 400px;
+    max-height: 800px;
+    overflow: hidden;
+    color: var(--white);
+}
+
+/* --- Images et Overlay --- */
+.imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.localiteImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transition de 1 seconde pour le fondu */
+}
+
+.localiteImage.active {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dégradé sombre pour améliorer le contraste du texte */
+    background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.4) 0%, 
+        rgba(0, 0, 0, 0.6) 70%, 
+        rgba(0, 0, 0, 0.7) 100%
+    );
+}
+
+/* --- Contenu Textuel --- */
+.contentWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 2rem;
+}
+
+.mainTitle {
+    font-size: 1.5rem; /* text-xl sur mobile */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+}
+@media (min-width: 640px) { /* sm */
+    .mainTitle {
+        font-size: 1.875rem; /* text-3xl */
+    }
+}
+
+.localiteName {
+    font-size: 3rem; /* text-4xl */
+    font-weight: 800;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 640px) { /* sm */
+    .localiteName {
+        font-size: 4rem; /* text-6xl */
+    }
+}
+
+.localiteIcon {
+    margin-right: 0.75rem;
+    color: var(--cg-green-600); /* Vert clair pour faire ressortir */
+}
+
+.localiteDescription {
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+@media (min-width: 640px) {
+    .localiteDescription {
+        font-size: 1.125rem; /* text-lg */
+    }
+}
+
+.discoverButton {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px; /* rounded-full */
+    background-color: var(--cg-green-700);
+    color: var(--white);
+    transition: background-color 0.2s ease-in-out, transform 0.1s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+.discoverButton:hover {
+    background-color: var(--cg-green-800);
+    transform: translateY(-1px);
+}
+
+/* --- Boutons de Navigation (Flèches) --- */
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+    transition: background 0.3s;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+}
+
+.navButton:hover {
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.prevButton {
+    left: 1rem;
+}
+
+.nextButton {
+    right: 1rem;
+}
+
+/* --- Indicateurs (Points) --- */
+.indicators {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 20;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0;
+}
+
+.indicatorActive {
+    background-color: var(--cg-green-700);
+}

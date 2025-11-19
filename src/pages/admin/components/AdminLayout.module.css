@@ -1,0 +1,18 @@
+/* src/pages/admin/components/AdminLayout.module.css */
+.layout {
+  @apply min-h-screen bg-gray-950 flex;
+}
+
+.main {
+  @apply flex-1 ml-64;
+}
+
+.content {
+  @apply p-8;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    @apply ml-0;
+  }
+}

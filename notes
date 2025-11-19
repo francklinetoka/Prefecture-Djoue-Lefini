@@ -1,0 +1,42 @@
+
+ActualitesSection.jsx
+
+ActualiteCard.jsx
+
+
+ServicesLocauxSection.jsx
+
+ServiceCard.jsx
+
+DocumentsSection.jsx
+
+DocumentCard.jsx
+
+LocalitesSection.jsx
+
+LocaliteCard.jsx
+
+TerritoireSection.jsx
+
+FaqSection.jsx
+
+FaqItem.jsx
+
+
+
+
+
+
+Section actuelle dans Index.tsx,Nom de Composant suggéré,Rôle et avantage
+
+2. Actualités,ActualitesSection.jsx,Encapsule la logique d'affichage des articles de blog. Facilite l'intégration de vraies données (via props ou fetching) sans surcharger l'index.
+Articles individuels (dans la boucle),ActualiteCard.jsx,Composant atomique et réutilisable pour afficher un article. Assure un style et une structure uniformes pour toutes les cartes.
+4. Services Publics Locaux,ServicesLocauxSection.jsx,Encapsule la grille des services. Permet de gérer les données des services dans ce composant.
+Cartes de service individuelles,ServiceCard.jsx,Composant atomique pour une carte de service. Rend le mapping plus clair.
+5. Documents & publications,DocumentsSection.jsx,Gère l'affichage des documents téléchargeables. Idéal pour séparer la logique d'affichage des liens/fichiers.
+Cartes de document individuelles,DocumentCard.jsx,"Composant atomique pour un lien de document (titre, type, icône de téléchargement)."
+6. Localités,LocalitesSection.jsx,Encapsule la grille des localités/districts.
+Cartes de localité individuelles,LocaliteCard.jsx,"Composant atomique pour l'affichage d'une localité avec image, titre et description."
+7. Territoire,TerritoireSection.jsx,Gère la section de présentation du territoire (carte des districts).
+8. FAQ,FaqSection.jsx,Encapsule la section Aide et Questions Fréquentes.
+Détails de FAQ individuels,FaqItem.jsx,Composant pour l'élément <details>/<summary> (une seule question/réponse).

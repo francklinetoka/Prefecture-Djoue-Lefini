@@ -1,0 +1,32 @@
+/* DataTable.module.css */
+.tableWrapper {
+  @apply bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-800;
+}
+
+.table {
+  @apply w-full text-left;
+}
+
+.table th {
+  @apply bg-[var(--cg-green-800)] text-[var(--cg-yellow-400)] font-bold px-6 py-4 text-sm uppercase tracking-wider;
+}
+
+.table td {
+  @apply px-6 py-5 border-b border-gray-800 text-gray-300;
+}
+
+.actionsHeader {
+  @apply text-center;
+}
+
+.actions {
+  @apply flex gap-3 justify-center;
+}
+
+.edit {
+  @apply text-[var(--cg-yellow-400)] hover:text-yellow-300 font-medium;
+}
+
+.delete {
+  @apply text-red-500 hover:text-red-400 font-medium;
+}

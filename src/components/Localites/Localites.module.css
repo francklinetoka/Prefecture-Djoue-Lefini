@@ -1,0 +1,100 @@
+/* src/components/Localites.module.css */
+
+/* Variables (doivent être accessibles) */
+:root {
+    --cg-green-800: #2e7d32;
+    --cg-green-700: #387c4f;
+    --cg-green-600: #4caf50;
+    --text-secondary: #4b5563; /* gray-600 */
+}
+
+/* --- LocalitesSection (Conteneur) --- */
+.localitesSection {
+  padding-top: 5rem; /* py-20 */
+  padding-bottom: 5rem; /* py-20 */
+  background-color: white;
+}
+
+.localitesTitle {
+  /* text-3xl md:text-4xl text-center mb-12 text-[var(--cg-green-800)] */
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem;
+  text-align: center;
+  margin-bottom: 3rem; /* mb-12 */
+  color: var(--cg-green-800);
+}
+@media (min-width: 768px) {
+    .localitesTitle {
+        font-size: 2.25rem; /* md:text-4xl */
+        line-height: 2.5rem;
+    }
+}
+
+/* --- LocaliteCard (Carte individuelle) --- */
+.localiteCard {
+  /* group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition */
+  background-color: white;
+  border-radius: 0.75rem; /* rounded-xl */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+  overflow: hidden;
+  transition-property: box-shadow;
+  transition-duration: 150ms;
+}
+.localiteCard:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* hover:shadow-xl */
+}
+
+.localiteImagePlaceholder {
+  /* bg-gray-300 border-2 border-dashed w-full h-56 */
+  background-color: #d1d5db; /* bg-gray-300 */
+  border: 2px dashed #9ca3af; /* border-2 border-dashed */
+  width: 100%;
+  height: 14rem; /* h-56 */
+}
+
+.localiteCardContent {
+  padding: 1.5rem; /* p-6 */
+}
+
+.localiteName {
+  /* text-xl font-bold text-[var(--cg-green-800)] flex items-center gap-2 mb-3 */
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: var(--cg-green-800);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  margin-bottom: 0.75rem; /* mb-3 */
+  margin-top: 0;
+}
+
+.localiteIcon {
+    /* text-[var(--cg-green-600)] */
+    color: var(--cg-green-600);
+    flex-shrink: 0;
+}
+
+.localiteDesc {
+  /* text-sm text-[var(--text-secondary)] leading-relaxed */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.625; /* leading-relaxed */
+  color: var(--text-secondary);
+}
+
+.localiteCardLink {
+  /* mt-5 inline-flex items-center gap-1 text-sm font-bold text-[var(--cg-green-700)] hover:text-[var(--cg-green-600)] */
+  margin-top: 1.25rem; /* mt-5 */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem; /* gap-1 */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: var(--cg-green-700);
+  transition-property: color;
+  transition-duration: 150ms;
+}
+.localiteCardLink:hover {
+    color: var(--cg-green-600);
+}

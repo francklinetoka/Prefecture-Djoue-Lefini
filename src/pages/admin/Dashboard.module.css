@@ -1,0 +1,86 @@
+/* src/pages/admin/Dashboard.module.css */
+/* Version CSS pur – garanti sans erreur Tailwind */
+
+.dashboard {
+  color: #f1f5f9;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.header {
+  font-family: 'Manrope', 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #ffcd00;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.card {
+  background-color: #111111;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #1a1a1a;
+}
+
+.card.green  { border-left: 8px solid #008040; }
+.card.yellow { border-left: 8px solid #ffcd00; }
+.card.red    { border-left: 8px solid #ce1126; }
+
+.card svg {
+  color: #ffcd00;
+  width: 40px;
+  height: 40px;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  margin-bottom: 0.25rem;
+}
+
+.value {
+  font-family: 'Manrope', 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #ffcd00;
+  letter-spacing: -0.03em;
+}
+
+.recent {
+  margin-top: 4rem;
+}
+
+.recent h2 {
+  font-family: 'Manrope', 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 1.875rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.recent p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}

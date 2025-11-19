@@ -1,0 +1,79 @@
+/* ===================================================== */
+/*  src/styles.css – Police SANS SERIF officielle       */
+/*  Préfecture de DJOUÉ-LÉFINI – République du Congo    */
+/*  Style administratif moderne – Novembre 2025         */
+/* ===================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ——— POLICES SANS SERIF (ultra-modernes & lisibles) ——— */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+/* ——— COULEURS OFFICIELLES Congo-Brazzaville ——— */
+:root {
+  --cg-green-900: #003300;
+  --cg-green-800: #004d27;
+  --cg-green-700: #006633;
+  --cg-green-600: #008040;
+
+  --cg-yellow-500: #ffb700;
+  --cg-yellow-400: #ffcd00;
+  --cg-yellow-300: #ffe066;
+
+  --cg-red-600: #ce1126;
+
+  --gray-950: #0a0a0a;
+  --gray-900: #111111;
+  --gray-800: #1a1a1a;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+}
+
+/* ——— POLICES 100 % SANS SERIF ——— */
+:root {
+  /* Police principale – ultra-populaire dans l’admin publique 2025 */
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Police pour titres forts & institutionnels (sans serif mais élégante) */
+  --font-heading: 'Manrope', 'Inter', sans-serif;
+
+  /* Police alternative (très moderne, utilisée par certains ministères) */
+  --font-accent: 'Space Grotesk', sans-serif;
+}
+
+/* Application globale – tout le site en sans-serif */
+html, body, * {
+  font-family: var(--font-body);
+}
+
+/* Titres institutionnels – sans serif mais avec du caractère */
+h1, h2, h3, h4, h5, h6,
+.text-heading {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--cg-yellow-400);
+}
+
+/* Titres secondaires ou accents */
+.text-accent {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Container avec marges confortables */
+.container {
+  @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+}
+
+/* Boutons officiels sans-serif */
+.btn-primary {
+  @apply bg-[var(--cg-green-700)] hover:bg-[var(--cg-green-600)] text-white font-semibold px-6 py-3.5 rounded-md transition shadow-lg;
+}
+.btn-yellow {
+  @apply bg-[var(--cg-yellow-400)] hover:bg-[var(--cg-yellow-300)] text-[var(--cg-green-900)] font-bold px-6 py-3.5 rounded-md transition shadow-md;
+}

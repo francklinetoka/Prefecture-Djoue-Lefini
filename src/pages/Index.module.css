@@ -1,0 +1,232 @@
+/* src/pages/Index.module.css – Version 100 % stable (Novembre 2025) */
+
+.heroSection {
+  @apply relative;
+}
+
+/* ====================== ACTUALITÉS ====================== */
+.newsSection {
+  @apply py-24 bg-[var(--gray-900)];
+}
+
+.newsTitle {
+  @apply text-heading text-4xl md:text-5xl text-center mb-16 text-[var(--cg-yellow-400)];
+}
+
+.newsCard {
+  @apply bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300;
+}
+
+.newsCardImage {
+  @apply w-full h-64 object-cover bg-gray-300 border-2 border-dashed;
+}
+
+.newsCardContent {
+  @apply p-8;
+}
+
+.newsCardDate {
+  @apply text-sm font-medium text-[var(--cg-green-600)];
+}
+
+.newsCardTitle {
+  @apply mt-3 text-2xl font-extrabold text-[var(--gray-950)];
+}
+
+.newsCardExcerpt {
+  @apply mt-4 text-[var(--text-secondary)] leading-relaxed line-clamp-3;
+}
+
+.newsCardLink {
+  @apply mt-6 inline-flex items-center gap-2 font-semibold text-[var(--cg-green-700)] hover:text-[var(--cg-green-600)] transition-colors;
+}
+
+/* ====================== MESSAGE DU PRÉFET ====================== */
+.prefetSection {
+  @apply py-24 text-white;
+  background: linear-gradient(to right, var(--cg-green-900), var(--cg-green-800));
+}
+
+.prefetTitle {
+  @apply text-heading text-4xl md:text-5xl mb-8;
+}
+
+.prefetSignature {
+  @apply mt-10 font-extrabold text-[var(--cg-yellow-400)] text-2xl;
+}
+
+.prefetPhoto {
+  @apply bg-gray-300 border-2 border-dashed rounded-2xl w-full h-96;
+}
+
+/* ====================== SERVICES EN LIGNE ====================== */
+.servicesSection {
+  @apply py-24 bg-white;
+}
+
+.servicesTitle {
+  @apply text-heading text-4xl md:text-5xl text-center mb-6 text-[var(--cg-green-800)];
+}
+
+.servicesSubtitle {
+  @apply text-center text-lg text-[var(--text-secondary)] max-w-3xl mx-auto mb-16;
+}
+
+.serviceCard {
+  @apply rounded-2xl p-8 border border-green-200 hover:shadow-xl transition-shadow duration-300;
+  background: linear-gradient(to bottom right, #f0fdf4, #ecfdf5);
+}
+
+.serviceCardTitle {
+  @apply text-2xl font-extrabold text-[var(--cg-green-800)] mb-3;
+}
+
+.serviceCardDesc {
+  @apply text-[var(--text-secondary)] mb-6;
+}
+
+.serviceCardList {
+  @apply space-y-3 mb-8;
+}
+
+/* flex → remplacé par CSS natif */
+.serviceCardItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.serviceCardItemBullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--cg-green-600);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.serviceCardLink {
+  @apply inline-flex items-center gap-2 font-bold text-[var(--cg-green-700)] hover:text-[var(--cg-green-600)];
+}
+
+/* ====================== DOCUMENTS ====================== */
+.documentsSection {
+  @apply py-24 bg-[var(--gray-900)];
+}
+
+.documentsTitle {
+  @apply text-heading text-4xl md:text-5xl text-center mb-16 text-[var(--cg-yellow-400)];
+}
+
+.documentCard {
+  @apply group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.documentIcon {
+  @apply text-[var(--cg-green-700)] mb-4;
+}
+
+.documentTitle {
+  @apply font-extrabold text-[var(--gray-950)];
+}
+
+.documentMeta {
+  @apply text-sm text-[var(--text-secondary)];
+}
+
+.documentDownload {
+  @apply text-[var(--cg-green-600)] group-hover:text-[var(--cg-green-700)] transition-colors;
+}
+
+/* ====================== LOCALITÉS ====================== */
+.localitesSection {
+  @apply py-24 bg-white;
+}
+
+.localitesTitle {
+  @apply text-heading text-4xl md:text-5xl text-center mb-16 text-[var(--cg-green-800)];
+}
+
+.localiteCard {
+  @apply group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300;
+}
+
+.localiteImage {
+  @apply w-full h-64 object-cover bg-gray-300 border-2 border-dashed;
+}
+
+.localiteCardContent {
+  @apply p-8;
+}
+
+.localiteName {
+  @apply text-3xl font-extrabold text-[var(--cg-green-800)] mb-4;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.localiteDesc {
+  @apply text-[var(--text-secondary)] leading-relaxed;
+}
+
+/* ====================== TERRITOIRE ====================== */
+.territoireSection {
+  @apply py-24;
+  background: linear-gradient(to bottom, #f3f4f6, #f9fafb);
+}
+
+.territoireTitle {
+  @apply text-heading text-4xl md:text-5xl text-center mb-8 text-[var(--cg-green-800)];
+}
+
+.territoireSubtitle {
+  @apply text-center text-lg text-[var(--text-secondary)] max-w-4xl mx-auto mb-16;
+}
+
+/* grid → CSS natif (plus de circular dependency) */
+.districtGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.districtItem {
+  @apply bg-[var(--cg-green-700)] text-white py-4 rounded-xl text-center font-bold text-lg;
+}
+
+/* ====================== FAQ ====================== */
+.faqSection {
+  @apply py-24 text-white bg-[var(--cg-green-900)];
+}
+
+.faqMainTitle {
+  @apply text-heading text-4xl md:text-5xl mb-6 text-center;
+}
+
+.faqSubtitle {
+  @apply text-3xl font-bold mb-14 text-center;
+}
+
+.faqItem {
+  @apply bg-[var(--cg-green-800)] rounded-2xl p-6 cursor-pointer;
+}
+
+.faqQuestion {
+  @apply font-bold text-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqAnswer {
+  @apply mt-5 text-green-100 leading-relaxed;
+}
+
+.contactButton {
+  @apply btn-yellow inline-flex items-center gap-4 text-xl font-bold px-10 py-5;
+}

@@ -1,0 +1,64 @@
+/* src/components/Hero.module.css – Version ZÉRO ERREUR garantie (2025) */
+
+.hero {
+  /* Hauteur réduite */
+  @apply relative h-[60vh] min-h-[400px] overflow-hidden;
+}
+
+.carousel {
+  @apply absolute inset-0;
+}
+
+.slide {
+  @apply absolute inset-0;
+}
+
+.image {
+  @apply w-full h-full object-cover;
+}
+
+/* Overlay sombre + dégradé */
+.overlay {
+  @apply absolute inset-0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.5), transparent);
+  
+  /* Centrage vertical et horizontal */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+/* LA CLASSE GRID */
+.grid {
+  /* max-w-lg limite la largeur, mx-auto centre */
+  @apply text-white text-center w-full max-w-md mx-auto; /* J'ai réduit le max-w de lg à md pour centrer sur une zone encore plus petite */
+  
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  /* Styles de grille réduits */
+  display: grid;
+  gap: 0.75rem; /* Réduction du gap */
+  grid-template-columns: repeat(2, 1fr);
+  
+  @screen lg {
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.card {
+  /* Padding vertical réduit */
+  @apply bg-white/10 backdrop-blur-sm rounded-xl py-3 border border-white/20; /* Réduction de py-4 à py-3 */
+}
+
+.number {
+  /* MODIFIÉ: Réduction de la taille du texte */
+  @apply block text-3xl md:text-4xl font-bold text-[var(--cg-yellow-400)]; /* Réduction de 4xl/5xl à 3xl/4xl */
+}
+
+.label {
+  /* MODIFIÉ: Réduction de la taille du texte */
+  @apply block text-xs md:text-sm uppercase tracking-wider text-gray-200 mt-1; /* Maintenu xs/sm (le minimum raisonnable) */
+}

@@ -1,0 +1,235 @@
+:root {
+  --cg-green-800: #2e7d32;
+  --cg-green-700: #387c4f;
+  --cg-yellow-400: #f5b542;
+  --cg-yellow-500: #f59e0b;
+}
+
+/* Header global */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--cg-green-800);
+  color: white;
+  transition: all 0.4s ease;
+}
+
+/* Barre du haut – toujours visible */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.container {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoWrapper {
+  width: 52px;
+  height: 52px;
+  background: white;
+  border-radius: 50%;
+  padding: 0.4rem;
+  border: 3px solid var(--cg-yellow-400);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5));
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--cg-yellow-400);
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  font-weight: 500;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchInput {
+  width: 190px;
+  padding: 0.45rem 2.2rem 0.45rem 0.9rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 0.875rem;
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.searchInput::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.8);
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.15);
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.mobileBtn {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .mobileBtn { display: flex; }
+}
+
+/* === NAVIGATION – Devient blanche au scroll === */
+.navBar {
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
+.header.scrolled .navBar {
+  background: white;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2.8rem;
+  padding: 0.9rem 0;
+  flex-wrap: wrap;
+  font-size: 0.975rem;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--cg-green-800);
+    flex-direction: column;
+    padding: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  .mobileOpen .navLinks {
+    max-height: 500px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+}
+
+.navLink {
+  color: white;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.header.scrolled .navLink {
+  color: #1f2937;
+}
+
+.header.scrolled .navLink:hover,
+.header.scrolled .active {
+  color: var(--cg-yellow-400) !important;
+}
+
+.active {
+  color: var(--cg-yellow-400);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--cg-yellow-400);
+  border-radius: 2px;
+}
+
+/* Dropdowns */
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cg-green-800);
+  min-width: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  margin-top: 8px;
+}
+
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.dropdownMenu a {
+  display: block;
+  padding: 0.8rem 1.4rem;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.dropdownMenu a:hover {
+  background: var(--cg-yellow-400);
+  color: #1a1a1a;
+}
